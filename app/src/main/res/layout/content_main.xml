@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.dtcc.jshaffe1.microwave.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/glNumPad"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:alignmentMode="alignBounds"
+        android:layout_alignParentStart="false">
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/btnStr1"
+            android:id="@+id/btn1"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/btnStr2"
+            android:id="@+id/btn2"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/btnStr3"
+            android:id="@+id/btn3"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/btnStr4"
+            android:id="@+id/btn4"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/btnStr5"
+            android:id="@+id/btn5"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/btnStr6"
+            android:id="@+id/btn6"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/btnStr7"
+            android:id="@+id/btn7"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/btnStr8"
+            android:id="@+id/btn8"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/btnStr9"
+            android:id="@+id/btn9"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/btnStrStopReset"
+            android:id="@+id/btnStopReset"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:width="50dp"
+            android:height="50dp"
+            android:textSize="15sp"
+            android:layout_gravity="top" />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/btnStr0"
+            android:id="@+id/btn0"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/btnStrStart"
+            android:id="@+id/btnStart"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:textSize="15sp"
+            android:layout_gravity="top" />
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtTimerMin"
+        android:id="@+id/txtTimerMinutes"
+        android:textSize="100sp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/txtColon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTimerSeconds"
+        android:textSize="100sp"
+        android:text="@string/txtTimerSec"
+        android:layout_marginEnd="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtColon"
+        android:id="@+id/txtColon"
+        android:textSize="100sp"
+        android:layout_alignParentTop="false"
+        android:layout_toStartOf="@+id/txtTimerSeconds"
+        android:layout_alignParentLeft="false"
+        android:layout_alignWithParentIfMissing="false" />
+</RelativeLayout>

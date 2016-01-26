@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Microwave</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Create strings for numbered buttons -->
+    <string name="btnStr0">0</string>
+    <string name="btnStr1">1</string>
+    <string name="btnStr2">2</string>
+    <string name="btnStr3">3</string>
+    <string name="btnStr4">4</string>
+    <string name="btnStr5">5</string>
+    <string name="btnStr6">6</string>
+    <string name="btnStr7">7</string>
+    <string name="btnStr8">8</string>
+    <string name="btnStr9">9</string>
+
+    <!-- Strings for operations -->
+    <string name="btnStrStopReset">Stop/Reset</string>
+    <string name="btnStrStart">Start</string>
+
+    <!-- Strings for timer -->
+    <string name="txtTimerMin">00</string>
+    <string name="txtTimerSec">00</string>
+    <string name="txtColon">:</string>
+</resources>
