@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
                 iMinutes += iSeconds / 60;      // Add number of minutes
                 iSeconds %= 60;                 // Find remainder to get seconds
                 if (iSeconds < 10)
-                    txtSeconds.setText("0" + String.format("%d", iMinutes));
+                    txtSeconds.setText("0" + String.format("%d", iSeconds));
                 else
                     txtSeconds.setText(String.format("%d", iSeconds));
                 if (iMinutes < 10)
