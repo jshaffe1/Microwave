@@ -203,9 +203,10 @@ public class MainActivity extends AppCompatActivity {
         // Convert seconds to minutes and seconds if it is over 59 seconds
         if(iSeconds > 59) {
             // Convert to minutes then try to add to minutes text
-            if (iMinutes + iSeconds / 60 > 99) {
+            if (iMinutes == 99) {
                 // Minutes field is maxed out so reset the text to 59
                 txtSeconds.setText(getString(R.string.fiftyNine, 59));
+                sSeconds = (String) txtSeconds.getText();
             }
             else {  // The minutes have not been maxed out
                 iMinutes += iSeconds / 60;      // Add number of minutes
@@ -215,13 +216,12 @@ public class MainActivity extends AppCompatActivity {
                 else
                     sSeconds = String.format("%d", iSeconds);
                 txtSeconds.setText(sSeconds);    // Set the seconds text
-
-                if (iMinutes < 10)  // Check for the same formatting issue
-                    sMinutes = "0" + String.format("%d", iMinutes);
-                else
-                    sMinutes = String.format("%d", iMinutes);
-                txtMinutes.setText(sMinutes);   // Set the minutes text
             }
+            if (iMinutes < 10)  // Check for the same formatting issue
+                sMinutes = "0" + String.format("%d", iMinutes);
+            else
+                sMinutes = String.format("%d", iMinutes);
+            txtMinutes.setText(sMinutes);   // Set the minutes text
         }
         startTimer();   // Begin the timer
     }
@@ -249,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         txtSeconds.setText(sSeconds);   // Set the new seconds to the textView
                     } else {
-                        if (iMinutes == 1) {        // Minutes will need formatting
+                        if (iMinutes < 11) {        // Minutes will need formatting
                             sMinutes = "0" + Integer.toString(--iMinutes);  // Decrement minutes before assignment
                         } else {
                             sMinutes = Integer.toString(--iMinutes);
