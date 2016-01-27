@@ -14,6 +14,7 @@
     <string name="btnStr8">8</string>
     <string name="btnStr9">9</string>
 
+
     <!-- Strings for operations -->
     <string name="btnStrStopReset">Stop/Reset</string>
     <string name="btnStrStart">Start</string>
@@ -22,4 +23,12 @@
     <string name="txtTimerMin">00</string>
     <string name="txtTimerSec">00</string>
     <string name="txtColon">:</string>
+
+    <!-- Strings used in setText -->
+    <string name="fiftyNine">%1$d</string>
+
+    <!-- Descriptions for imageViews -->
+    <string name="timerBackground">Timer Background</string>
+    <string name="door">Door</string>
+    <string name="turkey">Turkey</string>
 </resources>

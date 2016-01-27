@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -146,14 +146,28 @@
             android:layout_gravity="top" />
     </GridLayout>
 
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:id="@+id/ivTimerBackground"
+        android:background="#4d4d4d"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/glNumPad"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:contentDescription="@string/timerBackground"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txtTimerMin"
         android:id="@+id/txtTimerMinutes"
         android:textSize="100sp"
+        android:textColor="#00c853"
+        android:layout_toStartOf="@+id/txtColon"
         android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/txtColon" />
+        android:layout_alignBottom="@+id/ivTimerBackground" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -161,9 +175,11 @@
         android:id="@+id/txtTimerSeconds"
         android:textSize="100sp"
         android:text="@string/txtTimerSec"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="35dp"
+        android:textColor="#00c853"
+        android:layout_alignEnd="@+id/ivTimerBackground"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignBottom="@+id/ivTimerBackground" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -171,8 +187,29 @@
         android:text="@string/txtColon"
         android:id="@+id/txtColon"
         android:textSize="100sp"
-        android:layout_alignParentTop="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:textColor="#00c853"
         android:layout_toStartOf="@+id/txtTimerSeconds"
-        android:layout_alignParentLeft="false"
-        android:layout_alignWithParentIfMissing="false" />
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/ivTimerBackground" />
+
+    <ImageView
+        android:layout_width="330dp"
+        android:layout_height="400dp"
+        android:id="@+id/ivDoor"
+        android:layout_gravity="right|center_vertical"
+        android:background="@mipmap/door"
+        android:layout_toStartOf="@+id/glNumPad"
+        android:contentDescription="@string/door" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/ivTurkey"
+        android:layout_below="@+id/ivTimerBackground"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="39dp"
+        android:background="@mipmap/turkey"
+        android:contentDescription="@string/turkey" />
+
 </RelativeLayout>

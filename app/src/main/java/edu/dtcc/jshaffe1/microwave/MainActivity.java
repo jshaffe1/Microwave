@@ -242,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 if (iSeconds != iInitialSeconds) {      // if one second has already passed
                     if (iSeconds > 0) {
-                        if (iSeconds < 10) {
+                        if (iSeconds < 11) {
                             sSeconds = "0" + Integer.toString(--iSeconds);  // Format seconds field
                         } else {
                             sSeconds = Integer.toString(--iSeconds);
